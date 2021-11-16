@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <title>Fixtures</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="stylesheet" type="text/css" href={% static "css/bootstrap.min.css" %}>
+      <link rel="stylesheet" type="text/css" href={% static "css/style.css" %}>
+      <link rel="stylesheet" href={% static "css/responsive.css" %}>
+      <link rel="icon" href={% static "images/fevicon.png" %} type="image/gif" />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href={% static "css/jquery.mCustomScrollbar.min.css" %}>
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext"  rel="stylesheet">
+      <link rel="stylesheet" href={% static "css/owl.carousel.min.css" %}>
+      <link rel="stylesoeet" href={% static "css/owl.theme.default.min.css" %}>
+      <link rel="stylesheet" href={% static "https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" %} media="screen">
+   </head>
+   <body>
+      {% include "base/header.html" %}
+      {% block home %} {% endblock home %}
+      {% include "base/footer.html" %}
+      {% include "base/copyright.html" %}
+      <script src={% static "js/jquery.min.js" %}></script>
+      <script src={% static "js/popper.min.js" %}></script>
+      <script src={% static "js/bootstrap.bundle.min.js" %}></script>
+      <script src={% static "js/jquery-3.0.0.min.js" %}></script>
+      <script src={% static "js/plugin.js" %}></script>
+      <script src={% static "js/jquery.mCustomScrollbar.concat.min.js" %}></script>
+      <script src={% static "js/custom.js" %}></script>
+      <script src={% static "js/owl.carousel.js" %}></script>
+      <script>
+         $(document).ready(function() {
+         var owl = $('.gift_owl_carousel');
+         owl.owlCarousel({
+         items: 3,
+         loop: true,
+         margin: 10,
+         nav: true,
+         dots: false,
+         navText : ["<i class='fa fa-arrow-left'></i>","<i class='fa fa-arrow-right'></i>"],
+         autoplay: false,
+         autoplayTimeout: 3000,
+         autoplayHoverPause: true,
+         responsive: {
+         0: {
+            items: 1
+         },
+         769: {
+            items: 2,
+         },
+         992: {
+            items: 3
+         }
+         }
+         });   
+         });
+      </script>
+   </body>
+</html>
+
